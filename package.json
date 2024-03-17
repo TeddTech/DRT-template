@@ -1,0 +1,23 @@
+{
+	"devDependencies": {
+		"@semantic-release/changelog": "^6.0.3",
+		"@semantic-release/git": "^10.0.1",
+		"husky": "^9.0.11",
+		"lint-staged": "^15.2.2",
+		"semantic-release": "^23.0.4"
+	},
+	"scripts": {
+		"prepare": "husky install"
+	},
+	"lint-staged": {
+		"*.{ts,tsx,js,jsx}": [
+			"prettier --write",
+			"npx @biomejs/biome format --write",
+			"npx @biomejs/biome lint --apply",
+			"eslint --max-warnings 0 ."
+		],
+		"*.md": [
+			"markdownlint --fix"
+		]
+	}
+}
