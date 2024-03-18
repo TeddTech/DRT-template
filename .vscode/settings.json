@@ -1,0 +1,10 @@
+{
+	"conventionalCommits.scopes": [
+		"admin",
+		"billing",
+		"core",
+		"frontend",
+		"backend",
+		"repo-config"
+	]
+}
